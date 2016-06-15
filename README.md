@@ -4,13 +4,15 @@ attributes for Data Binding  of View(like Uri for ImageView) ,we create some com
 ##Download##
 
 ```groovy
- compile 'com.kelin.mvvmlight:library:0.6.0'
+ compile 'com.kelin.mvvmlight:library:1.0.0'
 ```
  
 requires at least android gradle plugin 1.5.0.
 
 ##Usage##
 ---
+####中文文档：[MVVM Light Toolkit使用指南](http://www.jianshu.com/p/43ea7a531700)####
+
 ###Data Binding###
 
 
