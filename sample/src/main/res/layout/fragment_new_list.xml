@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.kelin.mvvmlight.zhihu.news.NewsViewModel" />
+
+        <import type="me.tatarka.bindingcollectionadapter.LayoutManagers" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_marginTop="15dp"
+            android:visibility="@{viewModel.viewStyle.progressRefreshing?View.VISIBLE:View.GONE}" />
+
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:refreshing="@{viewModel.viewStyle.isRefreshing}"
+            bind:layout_behavior="@string/appbar_scrolling_view_behavior"
+            bind:onRefreshCommand="@{viewModel.onRefreshCommand}">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                bind:itemView="@{viewModel.itemView}"
+                bind:items="@{viewModel.itemViewModel}"
+                bind:layoutManager="@{LayoutManagers.linear()}"
+                bind:layout_behavior="@string/appbar_scrolling_view_behavior"
+                bind:onLoadMoreCommand="@{viewModel.onLoadMoreCommand}">
+
+            </android.support.v7.widget.RecyclerView>
+
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    </FrameLayout>
+</layout>

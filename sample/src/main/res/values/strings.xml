@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">知乎</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="today_news">今日日报</string>
+</resources>
