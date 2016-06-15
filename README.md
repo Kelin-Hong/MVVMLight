@@ -12,6 +12,7 @@ requires at least android gradle plugin 1.5.0.
 ##Usage##
 ---
 ####中文文档：[MVVM Light Toolkit使用指南](http://www.jianshu.com/p/43ea7a531700)####
+####引申阅读：[如何构建Android MVVM应用程序](http://www.jianshu.com/p/2fc41a310f79)####
 
 ###Data Binding###
 
