@@ -1,4 +1,7 @@
 # MVVM Light Toolkit
+---
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Android--MVVMLight-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/3737)
+
 A toolkit help to build Android MVVM Application，We have more
 attributes for Data Binding  of View(like Uri for ImageView) ,we create some command for deal with event( like click of Button),also have a global message pipe to communicate with other ViewModel.
 ##Download##
