@@ -21,7 +21,6 @@ requires at least android gradle plugin 1.5.0.
 
 
 Binding URI to the ImageView with bind:uri will make it loading bitmap from URI and render to ImageView automatically.
-
    ```xml
    <ImageView
      android:layout_width="match_parent"
@@ -30,7 +29,16 @@ Binding URI to the ImageView with bind:uri will make it loading bitmap from URI 
      bind:uri="@{viewModel.imageUrl}"
      bind:placeholderImageRes="@{R.drawable.ic_launcher}"/>
    ```
-   
+   Fresco.initialize(this) is require,because of loading image use Fresco default).
+   ```java
+     public class MyApp extends Application {
+       @Override
+       public void onCreate() {
+           super.onCreate();
+           Fresco.initialize(this);
+      }
+   ```
+
    ---  
     
    **Example**
